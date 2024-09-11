@@ -10,9 +10,9 @@ class HulkView(TemplateView):
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Hulk',
-            'body': 'My name is Bruce Banner',
-            'image': '/static/images/hulk.jpg'
+            'title': 'Nergigante',
+            'body': 'Monster Type: Elder Dragon',
+            'image': '/static/images/nergigante.jpg'
         }
 
 
@@ -21,9 +21,9 @@ class IronManView(TemplateView):
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Iron Man',
-            'body': 'My name is Tony Stark, but I am Iron Man',
-            'image': '/static/images/iron_man.jpg'
+            'title': 'Espinas',
+            'body': 'Monster Type: Flying Wyverns',
+            'image': '/static/images/espinas.jpg'
         }
 
 
@@ -32,7 +32,7 @@ class BlackWidow(TemplateView):
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Black Widow',
-            'body': 'My name is Natasha Romanova',
-            'image': '/static/images/black_widow.jpg'
+            'title': 'Bazelgeuse',
+            'body': 'Monster Type: Flying Wyverns',
+            'image': '/static/images/bazelgeuse.jpg'
         }
