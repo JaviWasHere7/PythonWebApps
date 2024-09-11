@@ -6,7 +6,7 @@ class IndexView(TemplateView):
     template_name = 'heroes.html'
 
 
-class HulkView(TemplateView):
+class NergiganteView(TemplateView):
     template_name = 'hero.html'
 
     def get_context_data(self, **kwargs):
@@ -17,7 +17,7 @@ class HulkView(TemplateView):
         }
 
 
-class IronManView(TemplateView):
+class EspinasView(TemplateView):
     template_name = "hero.html"
 
     def get_context_data(self, **kwargs):
@@ -28,7 +28,7 @@ class IronManView(TemplateView):
         }
 
 
-class BlackWidow(TemplateView):
+class BazelgeuseView(TemplateView):
     template_name = 'hero.html'
 
     def get_context_data(self, **kwargs):
@@ -47,4 +47,15 @@ class RajangView(TemplateView):
             'title': 'Rajang',
             'body': 'Monster Type: Fanged Beast',
             'image': '/static/images/rajang.jpg'
+        }
+    
+
+class VaalHazakView(TemplateView):
+    template_name = 'hero.html'
+
+    def get_context_data(self, **kwargs):
+        return {
+            'title': 'Vaal Hazak',
+            'body': 'Monster Type: Elder Dragon',
+            'image': '/static/images/vaal_hazak.jpg'
         }
