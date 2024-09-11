@@ -1,3 +1,4 @@
+from typing import Any
 from django.views.generic import TemplateView
 
 
@@ -35,4 +36,15 @@ class BlackWidow(TemplateView):
             'title': 'Bazelgeuse',
             'body': 'Monster Type: Flying Wyverns',
             'image': '/static/images/bazelgeuse.jpg'
+        }
+    
+
+class RajangView(TemplateView):
+    template_name = 'hero.html'
+
+    def get_context_data(self, **kwargs):
+        return {
+            'title': 'Rajang',
+            'body': 'Monster Type: Fanged Beast',
+            'image': '/static/images/rajang.jpg'
         }
