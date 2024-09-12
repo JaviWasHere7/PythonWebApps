@@ -1,3 +1,4 @@
+from typing import Any
 from django.views.generic import TemplateView
 
 
@@ -5,34 +6,56 @@ class IndexView(TemplateView):
     template_name = 'heroes.html'
 
 
-class HulkView(TemplateView):
+class NergiganteView(TemplateView):
     template_name = 'hero.html'
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Hulk',
-            'body': 'My name is Bruce Banner',
-            'image': '/static/images/hulk.jpg'
+            'title': 'Nergigante',
+            'body': 'Monster Type: Elder Dragon',
+            'image': '/static/images/nergigante.jpg'
         }
 
 
-class IronManView(TemplateView):
+class EspinasView(TemplateView):
     template_name = "hero.html"
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Iron Man',
-            'body': 'My name is Tony Stark, but I am Iron Man',
-            'image': '/static/images/iron_man.jpg'
+            'title': 'Espinas',
+            'body': 'Monster Type: Flying Wyverns',
+            'image': '/static/images/espinas.jpg'
         }
 
 
-class BlackWidow(TemplateView):
+class BazelgeuseView(TemplateView):
     template_name = 'hero.html'
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Black Widow',
-            'body': 'My name is Natasha Romanova',
-            'image': '/static/images/black_widow.jpg'
+            'title': 'Bazelgeuse',
+            'body': 'Monster Type: Flying Wyverns',
+            'image': '/static/images/bazelgeuse.jpg'
+        }
+    
+
+class RajangView(TemplateView):
+    template_name = 'hero.html'
+
+    def get_context_data(self, **kwargs):
+        return {
+            'title': 'Rajang',
+            'body': 'Monster Type: Fanged Beast',
+            'image': '/static/images/rajang.jpg'
+        }
+    
+
+class VaalHazakView(TemplateView):
+    template_name = 'hero.html'
+
+    def get_context_data(self, **kwargs):
+        return {
+            'title': 'Vaal Hazak',
+            'body': 'Monster Type: Elder Dragon',
+            'image': '/static/images/vaal_hazak.jpg'
         }
