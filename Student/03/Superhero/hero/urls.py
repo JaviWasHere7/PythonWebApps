@@ -1,11 +1,9 @@
 from django.urls import path
-from .views import BazelgeuseView, EspinasView, IndexView, NergiganteView, RajangView, VaalHazakView
+from .views import BlackWidow, HulkView, IndexView, IronManView
 
 urlpatterns = [
     path('', IndexView.as_view()),
-    path('nergigante', NergiganteView.as_view()),
-    path('espinas', EspinasView.as_view()),
-    path('bazelgeuse', BazelgeuseView.as_view()),
-    path('rajang', RajangView.as_view()),
-    path('vaal_hazak', VaalHazakView.as_view()),
+    path('hulk', HulkView.as_view()),
+    path('ironman', IronManView.as_view()),
+    path('blackwidow', BlackWidow.as_view()),
 ]
