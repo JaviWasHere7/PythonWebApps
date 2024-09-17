@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^nwzc%^x=jwg%3bnav%u_@$9m^+)m$f@1655+cdnn27!j%ey$e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.ondigitalocean.app']
 
 
 # Application definition
@@ -51,6 +51,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'config.urls'
+
+LOGIN_REDIRECT_URL = '/'
+
+LOGOUT_REDIRECT_URL = '/'
 
 TEMPLATES = [
     {
