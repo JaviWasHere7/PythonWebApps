@@ -5,34 +5,54 @@ class IndexView(TemplateView):
     template_name = 'heroes.html'
 
 
-class HulkView(TemplateView):
+class DeadPoolView(TemplateView):
     template_name = 'hero.html'
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Hulk',
-            'body': 'My name is Bruce Banner',
-            'image': '/static/images/hulk.jpg'
+            'title': 'Deadpool',
+            'body': '"With great power comes great merchandising opportunity."',
+            'image': '/static/images/Deadpool.webp'
         }
 
 
-class IronManView(TemplateView):
+class SpiderManView(TemplateView):
     template_name = "hero.html"
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Iron Man',
-            'body': 'My name is Tony Stark, but I am Iron Man',
-            'image': '/static/images/iron_man.jpg'
+            'title': 'Spider-Man',
+            'body': '"Anyone can wear the mask. You could wear the mask."',
+            'image': '/static/images/Spiderman.jpg'
         }
 
 
-class BlackWidow(TemplateView):
+class BatmanView(TemplateView):
     template_name = 'hero.html'
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Black Widow',
-            'body': 'My name is Natasha Romanova',
-            'image': '/static/images/black_widow.jpg'
+            'title': 'Batman',
+            'body': '"Even After Everything You’ve Done, I Would’ve Saved You."',
+            'image': '/static/images/Batman.webp'
+        }
+    
+class IronmanView(TemplateView):
+    template_name = 'hero.html'
+
+    def get_context_data(self, **kwargs):
+        return {
+            'title': 'Ironman',
+            'body': '“I’m sorry, Earth is closed today. You better pack it up and get outta here.”',
+            'image': '/static/images/Iron_Man.webp'
+        }
+    
+class GambitView(TemplateView):
+    template_name = 'hero.html'
+
+    def get_context_data(self, **kwargs):
+        return {
+            'title': 'Gambit',
+            'body': '"Woo, I’m about to make a name for myself!"',
+            'image': '/static/images/Gambit.jpg'
         }
