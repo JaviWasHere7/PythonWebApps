@@ -7,3 +7,4 @@ class Superhero(models.Model):
     strength = models.CharField(max_length=100)
     weakness = models.CharField(max_length=100)
     image = models.CharField(max_length=100)
+

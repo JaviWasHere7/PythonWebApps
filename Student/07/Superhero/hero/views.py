@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView
-
 from .models import Superhero
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 class HeroListView(ListView):
     template_name = 'hero/list.html'
@@ -26,3 +26,8 @@ class HeroUpdateView(UpdateView):
 class HeroDelateView(DeleteView):
     model = Superhero
     template_name = 'hero/delete.html'
+
+class HeroCreative(LoginRequiredMixin, CreateView):
+    template_name = "hero/add.html"
+    model = Superhero
+    fields = '__all__'
