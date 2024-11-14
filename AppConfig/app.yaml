@@ -22,7 +22,7 @@ services:
   run_command: |
     python manage.py migrate --no-input
     gunicorn --worker-tmp-dir /dev/shm config.wsgi
-  source_dir: Student/08/WebAppHosting
+  source_dir: Student/number/file name
 static_sites:
 - environment_slug: html
   github:
@@ -32,4 +32,4 @@ static_sites:
   name: webapps-demo-static
   routes:
   - path: /static
-  source_dir: Student/08/WebAppHosting/static
+  source_dir: Student/number/file name/static
