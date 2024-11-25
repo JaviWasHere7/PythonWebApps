@@ -1,5 +1,5 @@
 <h1>Superhero Articles</h1>
-<a href="{% url 'create_article' %}">Create Article</a>
+<a href="{% url 'create_article' %}">Create a New Article</a>
 {% for article in articles %}
     <h2>{{ article.title }}</h2>
     <p>By {{ article.author.username }} | {{ article.created_at }}</p>
