@@ -1,0 +1,21 @@
+{% extends "theme.html" %}
+
+{% block title %}Superhero List{% endblock %}
+
+{% block content %}
+    <h1>Superheroes</h1>
+    <ul>
+        {% for superhero in superheroes %}
+            <li>
+                <a href="{% url 'articles:detail' superhero.id %}">
+                    {{ superhero.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    {% if user.is_authenticated %}
+        <a href="{% url 'articles:add' %}">Add New Superhero</a>
+    {% else %}
+        <p>Log in to add new superheroes!</p>
+    {% endif %}
+{% endblock %}

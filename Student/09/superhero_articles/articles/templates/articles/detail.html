@@ -1,0 +1,17 @@
+{% extends "theme.html" %}
+
+{% block title %}Superhero: {{ object.name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ object.name }}</h1>
+    <p><strong>Identity:</strong> {{ object.identity }}</p>
+    <p><strong>Description:</strong> {{ object.description }}</p>
+    <p><strong>Strength:</strong> {{ object.strength }}</p>
+    <p><strong>Weakness:</strong> {{ object.weakness }}</p>
+    <img src="{{ object.image.url }}" alt="{{ object.name }}">
+    
+    {% if user == object.author %}
+        <a href="{% url 'superhero:edit' object.id %}">Edit</a>
+        <a href="{% url 'superhero:delete' object.id %}">Delete</a>
+    {% endif %}
+{% endblock %}
